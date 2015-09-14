@@ -10,35 +10,36 @@ function print(message) {
 function printRoster(playersArr){
 	for (var i = 0; i < playersArr.length; i++) {
 		player = playersArr[i];
-		divHTML += '<div class="col-sm-6 col-md-4">';
-		divHTML += '<div class="thumbnail">';
-		divHTML += '<img src="' + player.image + '" alt="...">';
-		divHTML += '<div class="caption">';
-		divHTML += '<h3>' + player.name + ' <strong><i>#' + player.number + '</i></strong></h3>';
-		divHTML += '<p><strong>Position: </strong>' + player.position + '</p>';
-		divHTML += '<p><strong>Age: </strong>' + player.age + '</p>';
-		divHTML += '<p><strong>Experince: </strong>' + player.experience + ' year(s)</p>';
-		divHTML += '<p><strong>College: </strong>' + player.college + '</p>';
-		divHTML += '</div>';
-		divHTML += '</div>';
-		divHTML += '</div>';
+		divHTML += '<div class="col-sm-6 col-md-4">' +
+			'<div class="thumbnail">' +
+				'<img src="' + player.image + '" alt="'+ player.name +'">' +
+				'<div class="caption">' +
+					'<h3>' + player.name + ' <strong><i>#' + player.number + '</i></strong></h3>' +
+					'<p><strong>Position: </strong>' + player.position + '</p>' +
+					'<p><strong>Age: </strong>' + player.age + '</p>' +
+					'<p><strong>Experince: </strong>' + player.experience + ' year(s)</p>' +
+					'<p><strong>College: </strong>' + player.college + '</p>' +
+				'</div>' +
+			'</div>' +
+		'</div>';
 	}
 	print(divHTML);
 }
 
 function getPlayer(player){
-	var playerInfo = '<div class="col-sm-6 col-md-4">';
-	playerInfo += '<div class="thumbnail">';
-	playerInfo += '<img src="' + player.image + '" alt="...">';
-	playerInfo += '<div class="caption">';
-	playerInfo += '<h3>' + player.name + ' <strong><i>#' + player.number + '</i></strong></h3>';
-	playerInfo += '<p><strong>Position: </strong>' + player.position + '</p>';
-	playerInfo += '<p><strong>Age: </strong>' + player.age + '</p>';
-	playerInfo += '<p><strong>Experince: </strong>' + player.experience + ' year(s)</p>';
-	playerInfo += '<p><strong>College: </strong>' + player.college + '</p>';
-	playerInfo += '</div>';
-	playerInfo += '</div>';
-	playerInfo += '</div>';
+	var playerInfo = '<div class="col-sm-6 col-md-4">' +
+		'<div class="thumbnail">' +
+			'<img src="' + player.image + '" alt="'+ player.name +'">' +
+			'<div class="caption">' +
+				'<h3>' + player.name + ' <strong><i>#' + player.number + '</i></strong></h3>' +
+				'<p><strong>Position: </strong>' + player.position + '</p>' +
+				'<p><strong>Age: </strong>' + player.age + '</p>' +
+				'<p><strong>Experince: </strong>' + player.experience + ' year(s)</p>' +
+				'<p><strong>College: </strong>' + player.college + '</p>' +
+			'</div>' +
+		'</div>' +
+	'</div>';
+
 	return playerInfo;
 }
 
